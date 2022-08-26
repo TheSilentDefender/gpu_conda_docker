@@ -63,6 +63,8 @@ RUN set -x && \
 RUN set -x && \
     cp /var/cuda-repo-wsl-ubuntu-11-7-local/*.gpg /usr/share/keyrings/ && \
     apt-get update && \
-    apt-get -y install cuda
+    apt-get -y install cuda && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
     
